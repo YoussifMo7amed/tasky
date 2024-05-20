@@ -1,6 +1,6 @@
 class Routes {
-  static const String login = '/Login';
-    static const String signUp = '/SignUp';
-    static const String adminHome = '/AdminHome';
-    static const String customerHome = '/CustomerHome';
+  static const onboarding = '/onboarding';
+  static const home = '/home';
+  static const login = '/login';
+  static const signUp = '/signup';
 }

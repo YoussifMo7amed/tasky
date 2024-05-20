@@ -1,15 +1,12 @@
-class FontFamilyHelper {
-  static const String cairoArabic = 'Cairo';
-  static const String poppinsEnglish = 'Poppins';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-static String getlocalizedFontFamily() {
-  // ignore: prefer_const_declarations
-  final  currentlanguage = 'ar';
-  if (currentlanguage == 'ar') {
-    return cairoArabic;
-  } else {
-    return  poppinsEnglish;
-  }
+class FontFamilyHelper {
+
+  static    TextStyle dm_sans = GoogleFonts.dmSans();
+
+static TextStyle getlocalizedFontFamily() {
+return dm_sans;
 }
 
 }

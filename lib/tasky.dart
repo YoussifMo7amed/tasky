@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/app/connectivity_controller.dart';
 import 'package:tasky/core/common/screens/no_network_screen.dart';
+import 'package:tasky/core/routes/app_router.dart';
+import 'package:tasky/core/routes/routers.dart';
 
 class Tasky extends StatelessWidget {
   const Tasky({super.key});
@@ -21,14 +23,23 @@ class Tasky extends StatelessWidget {
                   primarySwatch: Colors.blue,
                   useMaterial3: true,
                 ),
-                home: Scaffold(
-                  appBar: AppBar(
-                    title: const Text('Tasky'),
-                  ),
-                  body: const Center(
-                    child: Text('Tasky'),
-                  ),
-                ),
+                onGenerateRoute: AppRouter.generateroutes,
+                initialRoute: Routes.onboarding,
+                builder: (context, Widget) {
+                  return GestureDetector(
+                    onTap: () {
+                      FocusManager.instance.primaryFocus?.unfocus();
+                    },
+                    child: Scaffold(
+                      body: Builder(
+                        builder: (context) {
+                          ConnectivityController.instance.init();
+                          return Widget!;
+                        },
+                      ),
+                    ),
+                  );
+                },
               ),
             );
           } else {
