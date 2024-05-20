@@ -15,8 +15,8 @@ class LoginButton extends StatelessWidget {
       duration: 400,
       child: CustomButton(
                 onPressed: () {
-                  context.pushNamedAndRemoveUntil(Routes.login,
-                      predicate: (_) => false);
+                  // context.pushNamedAndRemoveUntil(Routes.login,
+                  //     predicate: (_) => false);
                 },
                 backgroundColor: ColorsLight.blueLight,
                 lastRadius: 10,

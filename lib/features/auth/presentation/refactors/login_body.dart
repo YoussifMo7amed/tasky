@@ -7,6 +7,7 @@ import 'package:tasky/core/helper/spacing.dart';
 import 'package:tasky/core/styles/fonts/font_wieght_helper.dart';
 import 'package:tasky/core/styles/images/app_images.dart';
 import 'package:tasky/features/auth/presentation/widgets/login/login_button.dart';
+import 'package:tasky/features/auth/presentation/widgets/login/login_text_button.dart';
 import 'package:tasky/features/auth/presentation/widgets/login/login_textfield.dart';
 
 class LoginBody extends StatelessWidget {
@@ -24,7 +25,11 @@ class LoginBody extends StatelessWidget {
           CustomFadeInDown(
             duration: 400,
             child: Center(
-              child: Image.asset(AppImages.onboarding),
+              child: SizedBox(
+                height: 400.h,
+                width: MediaQuery.of(context).size.width,
+
+                child: Image.asset(AppImages.onboarding,fit: BoxFit.cover,)),
             ),
           ),
           //login text
@@ -42,6 +47,9 @@ class LoginBody extends StatelessWidget {
           verticalSpace(10.h),
           //login button
         const  LoginButton(), 
+         verticalSpace(10.h),
+         //login textbutton
+        const LoginTextButton(), 
                 ],
               ),
         ));

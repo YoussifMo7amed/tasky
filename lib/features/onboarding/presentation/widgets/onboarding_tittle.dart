@@ -24,15 +24,18 @@ class OnBoardingTittle extends StatelessWidget {
                   fontWeight: FontweightHelper.bold,
                 ),),
             const SizedBox(height: 16,),
-            TextApp(
-              textAlign: TextAlign.center,
-              maxLines: 3,
-              text: 'This productive tool is designed to help you better manage your task project-wise conveniently!', theme: context.textStyle.copyWith(
-                fontSize: 14,
-                fontWeight: FontweightHelper.regular,
-                color: Colors.grey.shade600,
-                )
-              ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:  30.0),
+              child: TextApp(
+                textAlign: TextAlign.center,
+                maxLines: 3,
+                text: 'This productive tool is designed to help you better manage your task project-wise conveniently!', theme: context.textStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: FontweightHelper.regular,
+                  color: Colors.grey.shade600,
+                  )
+                ),
+            ),
           ],
         ),
       ),
