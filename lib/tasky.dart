@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/app/connectivity_controller.dart';
 import 'package:tasky/core/common/screens/no_network_screen.dart';
 
@@ -11,19 +12,22 @@ class Tasky extends StatelessWidget {
         valueListenable: ConnectivityController.instance.isConnected,
         builder: (_, value, __) {
           if (value) {
-            return MaterialApp(
-              title: 'Tasky',
-              debugShowCheckedModeBanner: false,
-              theme: ThemeData(
-                primarySwatch: Colors.blue,
-                useMaterial3: true,
-              ),
-              home: Scaffold(
-                appBar: AppBar(
-                  title: const Text('Tasky'),
+            return ScreenUtilInit(
+              designSize: const Size(360, 690),
+              child: MaterialApp(
+                title: 'Tasky',
+                debugShowCheckedModeBanner: false,
+                theme: ThemeData(
+                  primarySwatch: Colors.blue,
+                  useMaterial3: true,
                 ),
-                body: const Center(
-                  child: Text('Tasky'),
+                home: Scaffold(
+                  appBar: AppBar(
+                    title: const Text('Tasky'),
+                  ),
+                  body: const Center(
+                    child: Text('Tasky'),
+                  ),
                 ),
               ),
             );
