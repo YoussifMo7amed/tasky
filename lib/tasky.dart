@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_types_as_parameter_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/app/connectivity_controller.dart';
@@ -25,6 +27,7 @@ class Tasky extends StatelessWidget {
                 ),
                 onGenerateRoute: AppRouter.generateroutes,
                 initialRoute: Routes.onboarding,
+                // ignore: non_constant_identifier_names
                 builder: (context, Widget) {
                   return GestureDetector(
                     onTap: () {

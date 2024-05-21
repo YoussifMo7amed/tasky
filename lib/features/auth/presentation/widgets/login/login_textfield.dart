@@ -3,9 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/common/animations/animate_do.dart';
 import 'package:tasky/core/common/widgets/custom_text_field.dart';
-import 'package:tasky/core/helper/extentions.dart';
 import 'package:tasky/core/helper/spacing.dart';
-import 'package:tasky/core/utils/app_regex.dart';
 import 'package:tasky/features/auth/presentation/bloc/auth_bloc.dart';
 
 class LoginTextForm extends StatefulWidget {
@@ -25,7 +23,7 @@ class _LoginTextFormState extends State<LoginTextForm> {
   }
 @override
   void dispose() {
-    // TODO: implement dispose
+   
     super.dispose();
     _bloc.emailController.dispose();
     _bloc.passwordController.dispose();

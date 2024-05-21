@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/helper/extentions.dart';
-import 'package:tasky/core/styles/colors/colors_dark.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -43,7 +42,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      cursorColor: Colors.white,
+      cursorColor: Colors.black,
       style: TextStyle(
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
@@ -63,11 +62,11 @@ class CustomTextField extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: Colors.grey.shade600),
+          borderSide: const BorderSide(color: Colors.black),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: Colors.grey.shade600),
+          borderSide: const BorderSide(color: Colors.black),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/common/animations/animate_do.dart';
 import 'package:tasky/core/common/widgets/text_app.dart';
 import 'package:tasky/core/helper/extentions.dart';
-import 'package:tasky/core/routes/routers.dart';
 import 'package:tasky/core/styles/colors/colors_light.dart';
 import 'package:tasky/core/styles/fonts/font_wieght_helper.dart';
 
@@ -18,13 +17,13 @@ class LoginTextButton extends StatelessWidget {
         duration: 400,
         child: Row(
           children: [ 
-            TextApp(text: "Don’t have an account?", theme:context.textStyle.copyWith(
+            TextApp(text: "Log In now", theme:context.textStyle.copyWith(
               fontSize: 14.sp,
               fontWeight: FontweightHelper.regular,
               color: Colors.black
             ),),
              TextButton(onPressed: () {
-                context.pushReplacementNamed(Routes.signUp);
+               // context.pushReplacementNamed(Routes.signUp);
               }, 
               child: TextApp(
                 text: 'Sign Up Here',

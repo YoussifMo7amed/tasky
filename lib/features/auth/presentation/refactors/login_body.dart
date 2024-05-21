@@ -7,7 +7,6 @@ import 'package:tasky/core/helper/spacing.dart';
 import 'package:tasky/core/styles/fonts/font_wieght_helper.dart';
 import 'package:tasky/core/styles/images/app_images.dart';
 import 'package:tasky/features/auth/presentation/widgets/login/login_button.dart';
-import 'package:tasky/features/auth/presentation/widgets/login/login_text_button.dart';
 import 'package:tasky/features/auth/presentation/widgets/login/login_textfield.dart';
 
 class LoginBody extends StatelessWidget {
@@ -49,7 +48,13 @@ class LoginBody extends StatelessWidget {
         const  LoginButton(), 
          verticalSpace(10.h),
          //login textbutton
-        const LoginTextButton(), 
+        Row(
+          children: [ 
+            TextApp(text: "Log In now", theme:context.textStyle.copyWith(
+              fontSize: 14.sp,
+              fontWeight: FontweightHelper.regular,
+              color: Colors.black
+            ),)],)
                 ],
               ),
         ));

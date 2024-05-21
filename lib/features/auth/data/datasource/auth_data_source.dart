@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:tasky/core/service/Api/api_service.dart';
 import 'package:tasky/features/auth/data/models/login_request_body.dart';
 import 'package:tasky/features/auth/data/models/login_responce.dart';

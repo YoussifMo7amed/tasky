@@ -5,6 +5,8 @@ import 'package:tasky/core/common/animations/animate_do.dart';
 import 'package:tasky/core/common/widgets/custom_button.dart';
 import 'package:tasky/core/helper/extentions.dart';
 import 'package:tasky/core/routes/routers.dart';
+import 'package:tasky/core/service/shared_pref/pref_keys.dart';
+import 'package:tasky/core/service/shared_pref/shared_pref.dart';
 import 'package:tasky/core/styles/colors/colors_light.dart';
 import 'package:tasky/core/toast/show_toast.dart';
 import 'package:tasky/features/auth/presentation/bloc/auth_bloc.dart';
@@ -17,11 +19,12 @@ class LoginButton extends StatelessWidget {
     return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) {
   state.whenOrNull(
-          success: () {
+          success: (data) {
             ShowToast.showToastSuccessTop(
               message: 'Login Success',
             );
             context.pushNamedAndRemoveUntil(Routes.home, predicate: (_) => false);
+            SharedPref().setInt(PrefKeys.userId, data.id ?? 0);
           },
           error: (message) {
             ShowToast.showToastErrorTop(
@@ -39,7 +42,7 @@ class LoginButton extends StatelessWidget {
           child: SizedBox(
             height: 35,
             width: MediaQuery.of(context).size.width,
-            child: Center(child: const CircularProgressIndicator(
+            child: const Center(child: CircularProgressIndicator(
               color: ColorsLight.blueLight,
             )),
           )
