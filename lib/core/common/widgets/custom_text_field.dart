@@ -47,7 +47,7 @@ class CustomTextField extends StatelessWidget {
       style: TextStyle(
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
-        color: Colors.white,
+        color: Colors.black,
       ),
       validator: (value) {
         return validator!(value);

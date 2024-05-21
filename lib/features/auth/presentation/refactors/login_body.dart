@@ -25,11 +25,11 @@ class LoginBody extends StatelessWidget {
           CustomFadeInDown(
             duration: 400,
             child: Center(
-              child: SizedBox(
-                height: 400.h,
-                width: MediaQuery.of(context).size.width,
-
-                child: Image.asset(AppImages.onboarding,fit: BoxFit.cover,)),
+              child: Expanded(
+                child: Image.asset(
+                  height: 400.h,
+                  AppImages.onboarding,fit: BoxFit.cover,),
+              ),
             ),
           ),
           //login text
