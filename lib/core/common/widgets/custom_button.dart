@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasky/core/common/widgets/text_app.dart';
 import 'package:tasky/core/helper/extentions.dart';
-import 'package:tasky/core/styles/fonts/font_family_helper.dart';
 import 'package:tasky/core/styles/fonts/font_wieght_helper.dart';
 
 
