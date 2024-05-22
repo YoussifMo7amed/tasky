@@ -6,6 +6,8 @@ import 'package:tasky/core/app/connectivity_controller.dart';
 import 'package:tasky/core/common/screens/no_network_screen.dart';
 import 'package:tasky/core/routes/app_router.dart';
 import 'package:tasky/core/routes/routers.dart';
+import 'package:tasky/core/service/shared_pref/pref_keys.dart';
+import 'package:tasky/core/service/shared_pref/shared_pref.dart';
 
 class Tasky extends StatelessWidget {
   const Tasky({super.key});
@@ -26,7 +28,11 @@ class Tasky extends StatelessWidget {
                   useMaterial3: true,
                 ),
                 onGenerateRoute: AppRouter.generateroutes,
-                initialRoute: Routes.onboarding,
+                initialRoute: SharedPref().getBoolean(PrefKeys.onBoarding)!=null
+                    ? SharedPref().getString(PrefKeys.accessToken) != null
+                        ? Routes.home
+                        : Routes.login
+                    : Routes.onboarding,
                 // ignore: non_constant_identifier_names
                 builder: (context, Widget) {
                   return GestureDetector(

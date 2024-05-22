@@ -4,6 +4,8 @@ import 'package:tasky/core/common/animations/animate_do.dart';
 import 'package:tasky/core/common/widgets/custom_button.dart';
 import 'package:tasky/core/helper/extentions.dart';
 import 'package:tasky/core/routes/routers.dart';
+import 'package:tasky/core/service/shared_pref/pref_keys.dart';
+import 'package:tasky/core/service/shared_pref/shared_pref.dart';
 import 'package:tasky/core/styles/colors/colors_light.dart';
 
 class OnBoardingButton extends StatelessWidget {
@@ -15,6 +17,7 @@ class OnBoardingButton extends StatelessWidget {
       duration: 400,
       child: CustomButton(
                 onPressed: () {
+                  SharedPref().setBoolean(PrefKeys.onBoarding, true);
                   context.pushNamedAndRemoveUntil(Routes.login,
                       predicate: (_) => false);
                 },

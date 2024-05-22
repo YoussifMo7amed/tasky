@@ -49,11 +49,12 @@ class LoginBody extends StatelessWidget {
          verticalSpace(10.h),
          //login textbutton
         Row(
+             mainAxisAlignment: MainAxisAlignment.center,
           children: [ 
             TextApp(text: "Log In now", theme:context.textStyle.copyWith(
-              fontSize: 14.sp,
-              fontWeight: FontweightHelper.regular,
-              color: Colors.black
+              fontSize: 16.sp,
+              fontWeight: FontweightHelper.medium,
+              color: Colors.grey
             ),)],)
                 ],
               ),

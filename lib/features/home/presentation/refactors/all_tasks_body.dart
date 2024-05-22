@@ -42,7 +42,7 @@ class AllTasksBody extends StatelessWidget {
                           },
                           separatorBuilder: (context, index) =>
                               const SizedBox(),
-                          itemCount: 20,
+                          itemCount: 10,
                           
                         );
                       },
